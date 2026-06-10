@@ -2,4 +2,4 @@
 export { executeRun, UNATTENDED } from "./execute-run.mjs";
 export { normalize, groupByCell } from "./aggregate.mjs";
 export { priceTokens, rederiveCostUsd } from "./cost.mjs";
-export { createDefaultJudgeBackend } from "./judge.mjs";
+export { createDefaultJudgeBackend, createModelJudgeBackend, JUDGE_JSON_DIRECTIVE } from "./judge.mjs";

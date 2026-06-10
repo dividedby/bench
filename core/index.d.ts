@@ -184,3 +184,18 @@ export declare function createDefaultJudgeBackend(opts?: {
   name?: string;
   blindId?: string;
 }): JudgeBackend;
+
+export declare const JUDGE_JSON_DIRECTIVE: string;
+
+export declare function createModelJudgeBackend(opts?: {
+  name?: string;
+  blindId?: string;
+  model?: string;
+  timeoutMs?: number;
+  cwd?: string;
+  runCli?: (invocation: { args: string[]; cwd: string }) => {
+    status: number | null;
+    stdout: string;
+    stderr: string;
+  };
+}): JudgeBackend;
