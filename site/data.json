@@ -1,0 +1,263 @@
+{
+  "generatedAt": "2026-06-10T22:33:23.942Z",
+  "skills": [
+    {
+      "skill": "frontend-design",
+      "cells": [
+        {
+          "model": "haiku",
+          "effort": "high",
+          "costUsd": 0.21396550000000003,
+          "nTrials": 3,
+          "meanZ": -0.39218103213737837,
+          "nGradeTrials": 3,
+          "noisy": true
+        },
+        {
+          "model": "haiku",
+          "effort": "low",
+          "costUsd": 0.16281091666666667,
+          "nTrials": 3,
+          "meanZ": -0.6992547187452699,
+          "nGradeTrials": 3,
+          "noisy": false
+        },
+        {
+          "model": "haiku",
+          "effort": "medium",
+          "costUsd": 0.28247548333333333,
+          "nTrials": 3,
+          "meanZ": -1.000033919615012,
+          "nGradeTrials": 3,
+          "noisy": false
+        },
+        {
+          "model": "opus",
+          "effort": "high",
+          "costUsd": 1.48704425,
+          "nTrials": 3,
+          "meanZ": 0.9679641019802024,
+          "nGradeTrials": 3,
+          "noisy": true
+        },
+        {
+          "model": "opus",
+          "effort": "low",
+          "costUsd": 0.6666586666666666,
+          "nTrials": 3,
+          "meanZ": 0.16581668865774007,
+          "nGradeTrials": 3,
+          "noisy": false
+        },
+        {
+          "model": "opus",
+          "effort": "medium",
+          "costUsd": 1.17506625,
+          "nTrials": 3,
+          "meanZ": 0.6295848930891245,
+          "nGradeTrials": 3,
+          "noisy": true
+        },
+        {
+          "model": "sonnet",
+          "effort": "high",
+          "costUsd": 1.21143195,
+          "nTrials": 3,
+          "meanZ": 0.49794313841255894,
+          "nGradeTrials": 3,
+          "noisy": true
+        },
+        {
+          "model": "sonnet",
+          "effort": "low",
+          "costUsd": 0.5604748166666665,
+          "nTrials": 3,
+          "meanZ": -0.3669613625828916,
+          "nGradeTrials": 3,
+          "noisy": false
+        },
+        {
+          "model": "sonnet",
+          "effort": "medium",
+          "costUsd": 0.92256675,
+          "nTrials": 3,
+          "meanZ": 0.19712221094092675,
+          "nGradeTrials": 3,
+          "noisy": false
+        }
+      ]
+    },
+    {
+      "skill": "software-design",
+      "cells": [
+        {
+          "model": "haiku",
+          "effort": "high",
+          "costUsd": 0.11633676666666666,
+          "nTrials": 3,
+          "meanZ": 0.08020670719870264,
+          "nGradeTrials": 3,
+          "noisy": true
+        },
+        {
+          "model": "haiku",
+          "effort": "low",
+          "costUsd": 0.10934998333333334,
+          "nTrials": 3,
+          "meanZ": -0.5503614615108223,
+          "nGradeTrials": 3,
+          "noisy": false
+        },
+        {
+          "model": "haiku",
+          "effort": "medium",
+          "costUsd": 0.0872133,
+          "nTrials": 3,
+          "meanZ": -0.816898432261696,
+          "nGradeTrials": 3,
+          "noisy": true
+        },
+        {
+          "model": "opus",
+          "effort": "high",
+          "costUsd": 0.7024365833333333,
+          "nTrials": 3,
+          "meanZ": 0.7329885449591617,
+          "nGradeTrials": 3,
+          "noisy": false
+        },
+        {
+          "model": "opus",
+          "effort": "low",
+          "costUsd": 0.44258316666666664,
+          "nTrials": 3,
+          "meanZ": 0.3590936244868737,
+          "nGradeTrials": 3,
+          "noisy": false
+        },
+        {
+          "model": "opus",
+          "effort": "medium",
+          "costUsd": 0.6505997499999999,
+          "nTrials": 3,
+          "meanZ": 0.21224831527851037,
+          "nGradeTrials": 3,
+          "noisy": false
+        },
+        {
+          "model": "sonnet",
+          "effort": "high",
+          "costUsd": 0.3461474,
+          "nTrials": 3,
+          "meanZ": -0.10489096684288024,
+          "nGradeTrials": 3,
+          "noisy": true
+        },
+        {
+          "model": "sonnet",
+          "effort": "low",
+          "costUsd": 0.23785240000000005,
+          "nTrials": 3,
+          "meanZ": 0.12216405599311135,
+          "nGradeTrials": 3,
+          "noisy": true
+        },
+        {
+          "model": "sonnet",
+          "effort": "medium",
+          "costUsd": 0.30469065,
+          "nTrials": 3,
+          "meanZ": -0.03455038730095583,
+          "nGradeTrials": 3,
+          "noisy": false
+        }
+      ]
+    },
+    {
+      "skill": "to-prd",
+      "cells": [
+        {
+          "model": "haiku",
+          "effort": "high",
+          "costUsd": 0.0729536,
+          "nTrials": 3,
+          "meanZ": -1.22257820373864,
+          "nGradeTrials": 3,
+          "noisy": true
+        },
+        {
+          "model": "haiku",
+          "effort": "low",
+          "costUsd": 0.0721067,
+          "nTrials": 3,
+          "meanZ": -0.8385703631028915,
+          "nGradeTrials": 3,
+          "noisy": true
+        },
+        {
+          "model": "haiku",
+          "effort": "medium",
+          "costUsd": 0.06685515,
+          "nTrials": 3,
+          "meanZ": -0.8032289599314827,
+          "nGradeTrials": 3,
+          "noisy": true
+        },
+        {
+          "model": "opus",
+          "effort": "high",
+          "costUsd": 0.5298108333333332,
+          "nTrials": 3,
+          "meanZ": 0.9295341174008899,
+          "nGradeTrials": 3,
+          "noisy": false
+        },
+        {
+          "model": "opus",
+          "effort": "low",
+          "costUsd": 0.32727491666666664,
+          "nTrials": 3,
+          "meanZ": 0.6453236350242159,
+          "nGradeTrials": 3,
+          "noisy": false
+        },
+        {
+          "model": "opus",
+          "effort": "medium",
+          "costUsd": 0.490546,
+          "nTrials": 3,
+          "meanZ": -0.09542248729551346,
+          "nGradeTrials": 3,
+          "noisy": false
+        },
+        {
+          "model": "sonnet",
+          "effort": "high",
+          "costUsd": 0.20557363333333334,
+          "nTrials": 3,
+          "meanZ": 0.5006337723686877,
+          "nGradeTrials": 3,
+          "noisy": false
+        },
+        {
+          "model": "sonnet",
+          "effort": "low",
+          "costUsd": 0.15298718333333333,
+          "nTrials": 3,
+          "meanZ": 0.3401659572329628,
+          "nGradeTrials": 3,
+          "noisy": false
+        },
+        {
+          "model": "sonnet",
+          "effort": "medium",
+          "costUsd": 0.20944254999999998,
+          "nTrials": 3,
+          "meanZ": 0.5441425320417743,
+          "nGradeTrials": 3,
+          "noisy": false
+        }
+      ]
+    }
+  ]
+}

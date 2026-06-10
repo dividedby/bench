@@ -1,0 +1,5 @@
+runId,skill,source,model,effort,trial,exitCode,isError,costUsd,costRederivedUsd,costDeltaPct,durationMs,wallMs,numTurns,inputTokens,outputTokens,cacheReadTokens,cacheCreationTokens
+demo-synthetic__opus__high__t1,demo,synthetic,opus,high,1,0,false,0.40,0.40,0.0,1000,1100,5,100,200,300,400
+demo-synthetic__opus__high__t2,demo,synthetic,opus,high,2,0,false,0.60,0.60,0.0,1000,1100,5,100,200,300,400
+demo-synthetic__haiku__low__t1,demo,synthetic,haiku,low,1,0,false,0.10,0.10,0.0,1000,1100,5,100,200,300,400
+costonly-synthetic__sonnet__medium__t1,costonly,synthetic,sonnet,medium,1,0,false,0.25,0.25,0.0,1000,1100,5,100,200,300,400

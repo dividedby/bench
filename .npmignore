@@ -1,6 +1,7 @@
 # Belt-and-suspenders: the package.json "files" allowlist already restricts the
 # tarball to core/**, but exclude the local-harness assets explicitly too.
 results/
+site/
 fixtures/
 tasks/
 pricing.json

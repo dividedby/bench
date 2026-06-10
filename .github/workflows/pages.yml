@@ -1,0 +1,50 @@
+name: pages
+
+# Re-render the static benchmark site from the COMMITTED snapshot (site/data.json)
+# and deploy to GitHub Pages. This NEVER runs the paid sweep or any live model/judge
+# call — no results/, no secrets, no API cost. site/data.json is regenerated locally
+# (node site/build-data.mjs against the local results/ tree) and committed; this
+# workflow only re-renders site/index.html from it.
+#
+# Admin prerequisite (one-time): Settings → Pages → Source = GitHub Actions.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+
+      - name: Render site from committed snapshot
+        run: node site/render.mjs
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
