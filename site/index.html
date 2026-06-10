@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bench — model × effort × cost/quality</title>
+<style>
+  body { font: 15px/1.5 system-ui, sans-serif; margin: 2rem auto; max-width: 60rem; padding: 0 1rem; color: #1a1a1a; }
+  h1 { font-size: 1.4rem; }
+  section { margin: 2rem 0; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ccc; padding: .5rem .6rem; text-align: left; vertical-align: top; }
+  th { background: #f4f4f4; }
+  td.empty { color: #aaa; text-align: center; }
+  .cost { font-weight: 600; }
+  .z { color: #555; font-size: .85em; }
+  .flag { color: #c60; font-weight: 700; }
+  p.meta { color: #666; font-size: .85em; }
+  footer { margin-top: 3rem; color: #888; font-size: .8em; }
+</style>
+</head>
+<body>
+<h1>bench — model × effort × cost / quality</h1>
+<p class="meta">Each cell: <strong>mean cost (USD/run)</strong> over <code>$cost</code> · <strong>z</strong> = mean judge z-score within that skill's blind panel (higher is better, 0 ≈ panel average). <span class="flag">~</span> = noisy trial spread. Quality z-scores are comparable only within a skill, not across skills.</p>
+<p class="meta">Generated 2026-06-10T22:33:23.942Z. Derived snapshot — re-rendered on push; never re-benchmarked in CI.</p>
+<section><h2>frontend-design</h2><table><tr><th>model \ effort</th><th>low</th><th>medium</th><th>high</th></tr><tr><th>opus</th><td><div class="cost">$0.667</div><div class="z">z +0.17</div></td><td><div class="cost">$1.175</div><div class="z">z +0.63 <span class="flag" title="noisy trial spread">~</span></div></td><td><div class="cost">$1.487</div><div class="z">z +0.97 <span class="flag" title="noisy trial spread">~</span></div></td></tr><tr><th>sonnet</th><td><div class="cost">$0.560</div><div class="z">z -0.37</div></td><td><div class="cost">$0.923</div><div class="z">z +0.20</div></td><td><div class="cost">$1.211</div><div class="z">z +0.50 <span class="flag" title="noisy trial spread">~</span></div></td></tr><tr><th>haiku</th><td><div class="cost">$0.163</div><div class="z">z -0.70</div></td><td><div class="cost">$0.282</div><div class="z">z -1.00</div></td><td><div class="cost">$0.214</div><div class="z">z -0.39 <span class="flag" title="noisy trial spread">~</span></div></td></tr></table></section>
+<section><h2>software-design</h2><table><tr><th>model \ effort</th><th>low</th><th>medium</th><th>high</th></tr><tr><th>opus</th><td><div class="cost">$0.443</div><div class="z">z +0.36</div></td><td><div class="cost">$0.651</div><div class="z">z +0.21</div></td><td><div class="cost">$0.702</div><div class="z">z +0.73</div></td></tr><tr><th>sonnet</th><td><div class="cost">$0.238</div><div class="z">z +0.12 <span class="flag" title="noisy trial spread">~</span></div></td><td><div class="cost">$0.305</div><div class="z">z -0.03</div></td><td><div class="cost">$0.346</div><div class="z">z -0.10 <span class="flag" title="noisy trial spread">~</span></div></td></tr><tr><th>haiku</th><td><div class="cost">$0.109</div><div class="z">z -0.55</div></td><td><div class="cost">$0.087</div><div class="z">z -0.82 <span class="flag" title="noisy trial spread">~</span></div></td><td><div class="cost">$0.116</div><div class="z">z +0.08 <span class="flag" title="noisy trial spread">~</span></div></td></tr></table></section>
+<section><h2>to-prd</h2><table><tr><th>model \ effort</th><th>low</th><th>medium</th><th>high</th></tr><tr><th>opus</th><td><div class="cost">$0.327</div><div class="z">z +0.65</div></td><td><div class="cost">$0.491</div><div class="z">z -0.10</div></td><td><div class="cost">$0.530</div><div class="z">z +0.93</div></td></tr><tr><th>sonnet</th><td><div class="cost">$0.153</div><div class="z">z +0.34</div></td><td><div class="cost">$0.209</div><div class="z">z +0.54</div></td><td><div class="cost">$0.206</div><div class="z">z +0.50</div></td></tr><tr><th>haiku</th><td><div class="cost">$0.072</div><div class="z">z -0.84 <span class="flag" title="noisy trial spread">~</span></div></td><td><div class="cost">$0.067</div><div class="z">z -0.80 <span class="flag" title="noisy trial spread">~</span></div></td><td><div class="cost">$0.073</div><div class="z">z -1.22 <span class="flag" title="noisy trial spread">~</span></div></td></tr></table></section>
+<footer>Static render of <code>site/data.json</code>. Source: <a href="https://github.com/dividedby/bench">dividedby/bench</a>.</footer>
+</body>
+</html>
