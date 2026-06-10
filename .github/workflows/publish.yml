@@ -1,0 +1,42 @@
+name: publish
+
+# Publish @dividedby/bench-core to npm when a version tag is pushed.
+# Publishing = push a tag whose name matches the package.json version, e.g.:
+#   git tag v0.2.0 && git push origin v0.2.0
+# Requires an NPM_TOKEN repo secret (an npm automation token with publish rights).
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org"
+
+      # Guard: the tag must match the version in package.json, so a mistagged
+      # release can never publish a mismatched version.
+      - name: Verify tag matches package version
+        run: |
+          tag="${GITHUB_REF_NAME#v}"
+          pkg="$(node -p "require('./package.json').version")"
+          if [ "$tag" != "$pkg" ]; then
+            echo "tag v$tag does not match package.json version $pkg" >&2
+            exit 1
+          fi
+
+      - name: Test
+        run: node --test
+
+      - name: Publish
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
