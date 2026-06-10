@@ -1,0 +1,22 @@
+{
+  "id": "to-prd-synthetic",
+  "skill": "to-prd",
+  "source": "synthetic",
+  "fixture": "prd-synthetic",
+  "prompt": "/to-prd\n\nFeature brief (treat this as the decided conversation context — do not re-interview): linksnip needs **link expiration**. Callers should be able to mint a Link with an optional expiry — either an absolute timestamp or a relative TTL (e.g. 24h). After expiry, resolving the slug must behave as if the Link does not exist (404), and expired Links should be eligible for cleanup so the store does not grow unbounded. Operators want a default max lifetime that a Caller cannot exceed, and a sensible default when no expiry is given. Expiry checks must not require a database round-trip on the hot resolve path. Write the PRD to .scratch/prd.md following the skill's template, and publish it as an issue under .scratch/issues/ with the ready-for-agent label per docs/agents/issue-tracker.md.",
+  "expectedArtifacts": [".scratch/prd.md"],
+  "gradeArtifacts": [".scratch/prd.md", ".scratch/issues/*.md"],
+  "objectiveChecks": [
+    { "type": "fileExists", "path": ".scratch/prd.md" },
+    { "type": "fileContains", "path": ".scratch/prd.md", "anyOf": ["Problem Statement", "User Stories"] },
+    { "type": "globExists", "path": ".scratch/issues/*.md" },
+    { "type": "fileContains", "path": ".scratch/prd.md", "anyOf": ["expir", "TTL", "expiry"] }
+  ],
+  "rubric": [
+    "Problem and solution are framed from the user's/operator's perspective, matching the brief (optional expiry, absolute or relative TTL).",
+    "User stories are extensive and cover the key cases: minting with expiry, resolve-after-expiry returns 404, operator max-lifetime cap, default-when-unspecified, cleanup of expired Links.",
+    "Implementation decisions name modules/seams and respect the hot-path constraint (no DB round-trip on resolve) without prescribing file paths or code.",
+    "Uses the existing domain vocabulary (Link, slug, mint, resolve, Caller) consistently.",
+    "Published correctly: an issue file exists under .scratch/issues/ with the ready-for-agent label, per the local-markdown tracker convention."
+  ]
+}

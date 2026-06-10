@@ -1,0 +1,7 @@
+{
+  "_note": "USD per million tokens. Source: platform.claude.com/docs pricing, fetched 2026-06-03. Aliases resolve to the latest version. cacheWrite assumes the default 5-minute cache. Edit if rates change.",
+  "_aliasResolves": { "opus": "Claude Opus 4.8", "sonnet": "Claude Sonnet 4.6", "haiku": "Claude Haiku 4.5" },
+  "opus":   { "input": 5, "output": 25, "cacheWrite5m": 6.25, "cacheRead": 0.50 },
+  "sonnet": { "input": 3, "output": 15, "cacheWrite5m": 3.75, "cacheRead": 0.30 },
+  "haiku":  { "input": 1, "output": 5,  "cacheWrite5m": 1.25, "cacheRead": 0.10 }
+}

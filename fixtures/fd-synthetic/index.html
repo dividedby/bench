@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>linksnip — Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>linksnip</h1>
+      <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Links</a>
+        <a href="#" aria-current="page">Settings</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Settings</h2>
+
+      <section>
+        <h3>Account</h3>
+        <label>Display name <input type="text" value="Connor" /></label>
+        <label>Email <input type="email" value="connor@example.com" /></label>
+      </section>
+
+      <section>
+        <h3>API</h3>
+        <label>API key <input type="text" value="ls_live_xxx" readonly /></label>
+        <button>Regenerate key</button>
+      </section>
+
+      <section>
+        <h3>Defaults</h3>
+        <label>Default slug length <input type="number" value="4" /></label>
+        <label><input type="checkbox" checked /> Track visits</label>
+      </section>
+
+      <button>Save changes</button>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

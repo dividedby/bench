@@ -1,0 +1,30 @@
+{
+  "name": "@dividedby/bench-core",
+  "version": "0.1.0",
+  "description": "Decoupled core primitives for the model x effort benchmark harness: run execution, grade aggregation, cost re-derivation, and a judge backend interface.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "types": "./core/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./core/index.d.ts",
+      "import": "./core/index.mjs"
+    }
+  },
+  "files": [
+    "core"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dividedby/bench.git"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}

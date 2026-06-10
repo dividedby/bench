@@ -1,0 +1,9 @@
+# Belt-and-suspenders: the package.json "files" allowlist already restricts the
+# tarball to core/**, but exclude the local-harness assets explicitly too.
+results/
+fixtures/
+tasks/
+pricing.json
+test/
+*.mjs
+.DS_Store

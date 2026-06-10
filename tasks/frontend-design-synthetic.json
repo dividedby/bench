@@ -1,0 +1,23 @@
+{
+  "id": "frontend-design-synthetic",
+  "skill": "frontend-design",
+  "source": "synthetic",
+  "fixture": "fd-synthetic",
+  "prompt": "/frontend-design\n\nRe-theme the Settings page (index.html + styles.css) with a single opinionated design direction. Inputs — Stack: vanilla HTML/CSS/JS, no build step. Intent: re-theme an existing Settings page. Brand: linksnip, a developer-facing URL shortener; terse, fast, technical, precise and confident (not playful, not corporate-generic). Content structure: the existing Account / API / Defaults sections — keep the structure, restyle it. Constraints: WCAG 2.2 AA, keyboard + screen-reader paths, prefers-reduced-motion respected, fluid from 320px up, no external dependencies or web fonts that require a network fetch at runtime (system or self-described font stacks only). Aesthetic direction: surprise me with one strong, named direction that fits the brand. Commit docs/design/direction.md and a paired ADR under docs/adr/, instantiate tokens.css, and apply the new design by editing styles.css (and index.html only as needed for accessibility/structure). Do not introduce a build step.",
+  "expectedArtifacts": ["docs/design/direction.md", "tokens.css", "styles.css"],
+  "gradeArtifacts": ["docs/design/direction.md", "docs/adr/*.md", "tokens.css", "styles.css", "index.html"],
+  "objectiveChecks": [
+    { "type": "fileExists", "path": "docs/design/direction.md" },
+    { "type": "fileExists", "path": "tokens.css" },
+    { "type": "globExists", "path": "docs/adr/*.md" },
+    { "type": "fileChanged", "path": "styles.css" },
+    { "type": "fileContains", "path": "styles.css", "anyOf": ["var(--", "prefers-reduced-motion"] }
+  ],
+  "rubric": [
+    "Establishes a clear, named design point of view that fits the terse/technical developer brand — not generic AI aesthetic (no default purple gradients, no unjustified glassmorphism).",
+    "tokens.css defines a coherent system (color, type scale, spacing, motion) and styles.css consumes the tokens rather than hardcoding values.",
+    "Accessibility honored: AA contrast, visible focus states, keyboard paths, prefers-reduced-motion handled, fluid from 320px.",
+    "direction.md is complete (the 9 direction fields) and a paired ADR records the decision.",
+    "Restyle preserves the existing Account/API/Defaults structure and stays within the vanilla, no-build, no-network-font constraints."
+  ]
+}

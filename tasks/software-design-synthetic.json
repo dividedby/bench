@@ -1,0 +1,20 @@
+{
+  "id": "software-design-synthetic",
+  "skill": "software-design",
+  "source": "synthetic",
+  "fixture": "sd-synthetic",
+  "prompt": "/software-design\n\nThe PRD for per-caller rate limiting is at .scratch/prd.md and the published backlog is under .scratch/issues/ (001, 002, 003). Produce the Design Plan for this backlog: name the modules, locate the seams, define the testing strategy, and rewrite the three issue bodies into TDD-ready form. Write the Design Plan to .scratch/design-plan.md and update the issue files in place.",
+  "expectedArtifacts": [".scratch/design-plan.md"],
+  "gradeArtifacts": [".scratch/design-plan.md", ".scratch/issues/*.md"],
+  "objectiveChecks": [
+    { "type": "fileExists", "path": ".scratch/design-plan.md" },
+    { "type": "fileContains", "path": ".scratch/design-plan.md", "anyOf": ["seam", "module", "RateLimiter"] }
+  ],
+  "rubric": [
+    "Names concrete modules and locates seams at sensible boundaries (e.g. a RateLimiter seam consulted by the HTTP layer, domain logic unaware).",
+    "Defines a testing strategy that exploits the seams (injectable clock for the bucket, fake limiter for HTTP).",
+    "Rewrites the three issues into TDD-ready bodies with clear behavioral acceptance.",
+    "Respects the existing domain vocabulary from CONTEXT.md (Link, slug, mint, resolve, Caller).",
+    "Prefers existing seams/modules over inventing new ones; new seams proposed at the highest sensible point."
+  ]
+}

@@ -1,0 +1,30 @@
+/* Deliberately minimal, generic baseline — no design POV. The task is to replace this. */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #222;
+}
+header {
+  background: #f0f0f0;
+  padding: 12px 20px;
+}
+nav a {
+  margin-right: 12px;
+}
+main {
+  padding: 20px;
+  max-width: 600px;
+}
+section {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+input {
+  padding: 4px;
+}
+button {
+  padding: 6px 12px;
+}
