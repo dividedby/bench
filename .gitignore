@@ -1,6 +1,7 @@
 results/
 node_modules/
 .DS_Store
+.claude/gearbox-log.jsonl
 
 # Editor workspace files
 *.code-workspace
