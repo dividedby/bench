@@ -4,6 +4,7 @@
 // wrapper — this primitive only invokes the CLI and shapes the metrics.
 
 import { spawnSync } from "node:child_process";
+import { appendCostLog } from "./cost-log.mjs";
 
 // Applied identically to EVERY cell so it does not bias the model comparison.
 // The skills have "check with the user" checkpoints; in --print mode there is no user.
@@ -22,6 +23,7 @@ function defaultRunCli({ args, cwd }) {
     encoding: "utf8",
     maxBuffer: 64 * 1024 * 1024,
   });
+  appendCostLog(proc.stdout);
   return { status: proc.status, stdout: proc.stdout, stderr: proc.stderr };
 }
 

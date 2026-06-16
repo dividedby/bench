@@ -1,6 +1,6 @@
 {
   "name": "@dividedby/bench-core",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Decoupled core primitives for the model x effort benchmark harness: run execution, grade aggregation, cost re-derivation, and a judge backend interface.",
   "type": "module",
   "license": "MIT",
