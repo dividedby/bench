@@ -2,6 +2,7 @@
 // The default backend defers (no model); createModelJudgeBackend calls `claude -p`.
 
 import { spawnSync } from "node:child_process";
+import { appendCostLog } from "./cost-log.mjs";
 
 /**
  * @typedef {object} GradeResult
@@ -58,6 +59,7 @@ function defaultRunCli({ args, cwd }, timeout) {
     maxBuffer: 64 * 1024 * 1024,
     timeout,
   });
+  appendCostLog(proc.stdout);
   return { status: proc.status, stdout: proc.stdout, stderr: proc.stderr };
 }
 
