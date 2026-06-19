@@ -2,6 +2,7 @@ results/
 node_modules/
 .DS_Store
 .claude/gearbox-log.jsonl
+.claude/gearbox-baseline.txt
 
 # Editor workspace files
 *.code-workspace
