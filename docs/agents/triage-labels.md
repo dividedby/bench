@@ -15,9 +15,10 @@ Labels fall into four tiers plus a remove-stock rule.
 Domain one-off labels stay **local** and untouched. The convention governs the
 shared vocabulary, not a repo's private labels.
 
-Note: only the **CORE** tier is installed on this repo. LOOP/NETWORK and CHANNELS
-labels are documented here for reference; their presence on an issue does not imply
-this repo creates them.
+Note: this doc is the shared-vocabulary reference for **all** tiers; not every tier
+is necessarily created on this repo. A repo creates LOOP/NETWORK labels only if it
+runs the proposal loops, and never creates CHANNELS labels — those are owned by
+`dividedby/skills` and only *applied* here.
 
 ## CORE — State (all repos)
 
